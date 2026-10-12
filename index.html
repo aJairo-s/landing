@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>devStore — Todo para desarrolladores | Cursos, licencias y kits</title>
+<meta name="description" content="devStore: ecommerce para developers. Cursos prácticos, licencias originales y kits pro con pago 100% seguro, acceso inmediato y garantía de 30 días." />
+<meta property="og:title" content="devStore — Ecommerce para desarrolladores" />
+<meta property="og:description" content="Cursos, licencias originales y soporte real. Compra protegida y acceso inmediato." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234F46E5'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='monospace' font-weight='bold'>&gt;_</text></svg>" />
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="announce">
+  <div class="wrap announce__in">
+    <span class="dot"></span>
+    <p>Acceso digital inmediato &nbsp;·&nbsp; Garantía 30 días &nbsp;·&nbsp; Pago 100% seguro SSL</p>
+    <a href="#catalogo">Ver catálogo →</a>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="devStore inicio">
+      <span class="brand__mark">&gt;_</span>
+      <span class="brand__name">devStore</span>
+      <span class="brand__tag">para devs</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#beneficios" data-link="beneficios">Beneficios</a>
+      <a href="#catalogo" data-link="catalogo">Catálogo</a>
+      <a href="#seguridad" data-link="seguridad">Seguridad</a>
+      <a href="#opiniones" data-link="opiniones">Opiniones</a>
+      <a href="#faq" data-link="faq">FAQ</a>
+    </nav>
+    <div class="nav__actions">
+      <label class="search" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" placeholder="Buscar curso, licencia…" id="searchInput" />
+      </label>
+      <button class="cartbtn" id="cartOpen" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></svg>
+        <span class="cartbtn__count" id="cartCount">0</span>
+      </button>
+      <a href="#catalogo" class="btn btn--primary btn--sm magnetic">Comprar ahora</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobilemenu" id="mobilemenu">
+    <a href="#beneficios">Beneficios</a><a href="#catalogo">Catálogo</a><a href="#seguridad">Seguridad</a><a href="#opiniones">Opiniones</a><a href="#faq">FAQ</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="grid"></div>
+      <div class="orb orb--a" data-parallax="30"></div>
+      <div class="orb orb--b" data-parallax="-24"></div>
+      <div class="orb orb--c" data-parallax="16"></div>
+      <div class="spot" id="spot"></div>
+    </div>
+    <div class="wrap hero__in">
+      <div class="hero__copy">
+        <p class="eyebrow reveal"><span class="pulse"></span> Ecommerce para desarrolladores · Nuevo: licencias 2026</p>
+        <h1 class="h1 reveal" style="--d:.08s">
+          Impulsa tu carrera con<br />
+          <span class="rotator" id="rotator" aria-live="polite" aria-label="cursos prácticos">
+            <span class="rot-word is-active">cursos prácticos</span>
+            <span class="rot-word" aria-hidden="true">licencias originales</span>
+            <span class="rot-word" aria-hidden="true">kits pro dev</span>
+            <span class="rot-word" aria-hidden="true">soporte real 24/7</span>
+          </span>
+        </h1>
+        <p class="lede reveal" style="--d:.16s">Todo lo que un dev necesita en un solo checkout seguro: cursos con proyectos reales, licencias con factura y entrega inmediata. Sin piratería. Sin esperas. Sin riesgo.</p>
+        <div class="hero__cta reveal" style="--d:.24s">
+          <a href="#catalogo" class="btn btn--primary magnetic">Explorar catálogo
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#seguridad" class="btn btn--ghost magnetic"><span class="lock">🔒</span> Compra protegida</a>
+        </div>
+        <div class="microtrust reveal" style="--d:.32s">
+          <span class="stars" aria-label="4.9 de 5">★★★★★ <b>4.9/5</b></span>
+          <span class="sep"></span><span><b>+12,400</b> devs compran aquí</span>
+          <span class="sep"></span><span class="shield">🛡️ Pago cifrado SSL</span>
+        </div>
+        <dl class="stats reveal" style="--d:.4s">
+          <div><dt><span class="count" data-count="12400">0</span>+</dt><dd>developers activos</dd></div>
+          <div><dt><span class="count" data-count="98">0</span>%</dt><dd>entrega inmediata</dd></div>
+          <div><dt><span class="count" data-count="30">0</span> días</dt><dd>garantía total</dd></div>
+        </dl>
+      </div>
+      <div class="hero__visual reveal" style="--d:.2s" data-tilt>
+        <div class="mock" id="mockCard">
+          <div class="mock__head">
+            <span class="mock__dots"><i></i><i></i><i></i></span>
+            <span class="mock__url">devstore.shop/checkout — 🔒 SSL seguro</span>
+          </div>
+          <div class="mock__body">
+            <div class="mock__prod">
+              <div class="mock__thumb">TS</div>
+              <div><b>Master TypeScript 2026</b><small>Curso · 24 h · Certificado</small>
+                <div class="mock__rate">★★★★★ <span>(2,318)</span></div>
+              </div>
+              <div class="mock__price">$49 <s>$89</s></div>
+            </div>
+            <div class="mock__row"><span>Subtotal</span><span>$49.00</span></div>
+            <div class="mock__row"><span>Protección comprador</span><span class="free">Gratis</span></div>
+            <div class="mock__row total"><span>Total</span><span>$49.00</span></div>
+            <button class="btn btn--primary btn--block" data-add="Master TypeScript 2026">Pagar seguro →</button>
+            <p class="mock__pay">Visa · Mastercard · PayPal · Stripe · PSE</p>
+          </div>
+          <div class="float f1">✅ Licencia verificada</div>
+          <div class="float f2">⚡ Acceso inmediato</div>
+          <div class="float f3">🛡️ Garantía 30 días</div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap hero__logos reveal" style="--d:.1s">
+      <small>Empresas cuyos devs compran en devStore</small>
+      <div class="logos"><span>Nubank</span><span>Platzi</span><span>Rappi</span><span>Globant</span><span>Mercado Libre</span><span>Softtek</span></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>🔒 SSL 256-bit</span><span>💳 Visa</span><span>💳 Mastercard</span><span>🅿️ PayPal</span><span>⚡ Stripe</span><span>🏦 PSE · OXXO</span><span>✅ Licencias 100% originales</span><span>↩️ Devolución 30 días</span>
+      <span>🔒 SSL 256-bit</span><span>💳 Visa</span><span>💳 Mastercard</span><span>🅿️ PayPal</span><span>⚡ Stripe</span><span>🏦 PSE · OXXO</span><span>✅ Licencias 100% originales</span><span>↩️ Devolución 30 días</span>
+    </div>
+  </div>
+
+  <!-- BENEFICIOS -->
+  <section class="section" id="beneficios">
+    <div class="wrap">
+      <p class="kicker reveal">Ventajas devStore</p>
+      <h2 class="h2 reveal" style="--d:.08s">Por qué comprar aquí y no en otro lado</h2>
+      <p class="sub reveal" style="--d:.14s">Combinamos lo mejor de un marketplace con la seriedad de un distribuidor autorizado.</p>
+      <div class="grid6">
+        <article class="card reveal" style="--d:.05s"><div class="ico">⚡</div><h3>Acceso inmediato</h3><p>Recibes claves, cursos y facturas en menos de 2 minutos tras el pago. Sin envíos eternos.</p><span class="mini">Entrega digital automatizada</span></article>
+        <article class="card reveal" style="--d:.12s"><div class="ico">✅</div><h3>Licencias originales</h3><p>Distribuidor autorizado JetBrains, Microsoft, Adobe. Nada de keys grises ni cuentas compartidas.</p><span class="mini">Verificable con el fabricante</span></article>
+        <article class="card reveal" style="--d:.19s"><div class="ico">🛡️</div><h3>Pagos protegidos</h3><p>Cifrado SSL 256-bit, PCI DSS y 3D Secure. Nunca guardamos tu tarjeta.</p><span class="mini">Stripe · PayPal · PSE</span></article>
+        <article class="card reveal" style="--d:.26s"><div class="ico">🧑‍💻</div><h3>Soporte dev real</h3><p>Te atiende otro programador, en español, 24/7 por chat y Discord. Tiempo medio: 4 min.</p><span class="mini">No bots, personas</span></article>
+        <article class="card reveal" style="--d:.33s"><div class="ico">🔄</div><h3>Actualizaciones incluidas</h3><p>Cursos y licencias con updates por 12 meses sin costo extra.</p><span class="mini">Changelog público</span></article>
+        <article class="card reveal" style="--d:.4s"><div class="ico">🧾</div><h3>Factura y empresa</h3><p>Factura electrónica para tu empresa o freelance. Compras deducibles sin fricción.</p><span class="mini">RFC · RUT · CUIT · RUC</span></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGO -->
+  <section class="section section--soft" id="catalogo">
+    <div class="wrap">
+      <div class="split reveal">
+        <div><p class="kicker">Catálogo destacado</p>
+          <h2 class="h2">Cursos, licencias y kits más vendidos</h2></div>
+        <div class="filters" role="tablist" aria-label="Filtrar productos">
+          <button class="chip is-on" data-filter="all">Todos</button>
+          <button class="chip" data-filter="curso">Cursos</button>
+          <button class="chip" data-filter="licencia">Licencias</button>
+          <button class="chip" data-filter="kit">Kits</button>
+        </div>
+      </div>
+      <div class="products" id="products">
+        <article class="prod reveal" data-cat="curso" data-name="Master TypeScript 2026">
+          <div class="prod__img g1"><span>TS</span><em class="badge">-45%</em></div>
+          <small class="prod__cat">Curso · 24 h · Certificado</small>
+          <h3>Master TypeScript 2026</h3>
+          <p class="prod__rate">★★★★★ 4.9 <span>(2,318)</span></p>
+          <p class="prod__price">$49 <s>$89</s> <span class="ok">· Acceso de por vida</span></p>
+          <button class="btn btn--dark btn--block" data-add="Master TypeScript 2026">Añadir al carrito</button>
+        </article>
+        <article class="prod reveal" data-cat="licencia" data-name="JetBrains All Products 1 año" style="--d:.08s">
+          <div class="prod__img g2"><span>JB</span><em class="badge badge--green">Original</em></div>
+          <small class="prod__cat">Licencia · 1 año · 1 usuario</small>
+          <h3>JetBrains All Products 1 año</h3>
+          <p class="prod__rate">★★★★★ 5.0 <span>(941)</span></p>
+          <p class="prod__price">$159 <s>$199</s> <span class="ok">· Key oficial</span></p>
+          <button class="btn btn--dark btn--block" data-add="JetBrains All Products 1 año">Añadir al carrito</button>
+        </article>
+        <article class="prod reveal" data-cat="curso" data-name="Next.js + IA: de cero a SaaS" style="--d:.16s">
+          <div class="prod__img g3"><span>N/</span><em class="badge">Nuevo</em></div>
+          <small class="prod__cat">Curso · 18 h · Proyecto SaaS</small>
+          <h3>Next.js + IA: de cero a SaaS</h3>
+          <p class="prod__rate">★★★★★ 4.8 <span>(1,102)</span></p>
+          <p class="prod__price">$59 <s>$99</s> <span class="ok">· Actualizado Oct 2026</span></p>
+          <button class="btn btn--dark btn--block" data-add="Next.js + IA: de cero a SaaS">Añadir al carrito</button>
+        </article>
+        <article class="prod reveal" data-cat="licencia" data-name="Microsoft 365 Dev + Copilot" style="--d:.24s">
+          <div class="prod__img g4"><span>M365</span><em class="badge badge--green">Factura incluida</em></div>
+          <small class="prod__cat">Licencia · 1 año · 5 dispositivos</small>
+          <h3>Microsoft 365 Dev + Copilot</h3>
+          <p class="prod__rate">★★★★★ 4.9 <span>(764)</span></p>
+          <p class="prod__price">$89 <s>$129</s> <span class="ok">· Activación directa</span></p>
+          <button class="btn btn--dark btn--block" data-add="Microsoft 365 Dev + Copilot">Añadir al carrito</button>
+        </article>
+        <article class="prod reveal" data-cat="kit" data-name="Kit Mecánico Dev Pro" style="--d:.32s">
+          <div class="prod__img g5"><span>⌨️</span><em class="badge">Envío gratis</em></div>
+          <small class="prod__cat">Kit físico · Teclado + mouse + hoodie</small>
+          <h3>Kit Mecánico Dev Pro</h3>
+          <p class="prod__rate">★★★★☆ 4.7 <span>(512)</span></p>
+          <p class="prod__price">$129 <s>$169</s> <span class="ok">· Garantía 2 años</span></p>
+          <button class="btn btn--dark btn--block" data-add="Kit Mecánico Dev Pro">Añadir al carrito</button>
+        </article>
+        <article class="prod reveal" data-cat="kit" data-name="Pack Carrera Full-Stack" style="--d:.4s">
+          <div class="prod__img g6"><span>🚀</span><em class="badge badge--green">Best seller</em></div>
+          <small class="prod__cat">Bundle · 5 cursos + 1 licencia</small>
+          <h3>Pack Carrera Full-Stack</h3>
+          <p class="prod__rate">★★★★★ 5.0 <span>(3,007)</span></p>
+          <p class="prod__price">$99 <s>$249</s> <span class="ok">· Ahorra 60%</span></p>
+          <button class="btn btn--dark btn--block" data-add="Pack Carrera Full-Stack">Añadir al carrito</button>
+        </article>
+      </div>
+      <p class="nores reveal" id="noRes" hidden>Sin resultados para tu búsqueda. Prueba con “licencia” o “curso”.</p>
+    </div>
+  </section>
+
+  <!-- SEGURIDAD -->
+  <section class="section" id="seguridad">
+    <div class="wrap secure">
+      <div class="secure__copy">
+        <p class="kicker kicker--green reveal">🔒 Confianza y seguridad</p>
+        <h2 class="h2 reveal" style="--d:.08s">Compra con la tranquilidad de un banco, la velocidad de un dev</h2>
+        <ul class="check reveal" style="--d:.16s">
+          <li><b>Cifrado SSL 256-bit</b> en todo el checkout. Tus datos viajan protegidos.</li>
+          <li><b>Cumplimiento PCI DSS</b> vía Stripe/PayPal. Nunca tocamos tu tarjeta.</li>
+          <li><b>Autenticación 3D Secure</b> y antifraude con IA en cada pedido.</li>
+          <li><b>Garantía de 30 días:</b> si no te sirve, te devolvemos el dinero. Sin preguntas.</li>
+          <li><b>Licencias auditables:</b> cada key se verifica con el fabricante antes del envío.</li>
+        </ul>
+        <div class="seals reveal" style="--d:.24s">
+          <span><i class="live"></i> SSL activo</span><span>PCI DSS</span><span>3D Secure</span><span>Stripe</span><span>PayPal verificado</span>
+        </div>
+      </div>
+      <div class="secure__panel reveal" style="--d:.18s" data-parallax="12">
+        <div class="panel">
+          <h3>🛡️ Tu compra protegida</h3>
+          <ol>
+            <li><b>Pagas</b><small>Checkout cifrado + 3D Secure</small></li>
+            <li><b>Verificamos</b><small>Antifraude + key original</small></li>
+            <li><b>Recibes</b><small>Email + panel en &lt; 2 min</small></li>
+            <li><b>Te respaldamos</b><small>30 días + soporte 24/7</small></li>
+          </ol>
+          <div class="panel__foot"><span>● Sistema operativo</span><code>uptime 99.99%</code></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASOS -->
+  <section class="section section--soft">
+    <div class="wrap">
+      <h2 class="h2 center reveal">Cómo funciona</h2>
+      <p class="sub center reveal" style="--d:.08s">Del clic al código en 3 pasos.</p>
+      <div class="steps">
+        <div class="step reveal"><span class="n">1</span><h3>Elige</h3><p>Filtra por curso, licencia o kit. Todo con reseñas verificadas.</p></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="step reveal" style="--d:.12s"><span class="n">2</span><h3>Paga seguro</h3><p>Tarjeta, PayPal, PSE u OXXO con cifrado de nivel bancario.</p></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="step reveal" style="--d:.24s"><span class="n">3</span><h3>Recibe al instante</h3><p>Keys y accesos en tu email y panel. Factura automática.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIONES -->
+  <section class="section" id="opiniones">
+    <div class="wrap">
+      <p class="kicker reveal">Prueba social</p>
+      <h2 class="h2 reveal" style="--d:.08s">Lo que dicen los devs verificados</h2>
+      <div class="tests">
+        <figure class="t reveal"><blockquote>“Compré la licencia JetBrains un viernes a las 11pm y en 1 minuto ya estaba activada. La factura llegó sola. Impecable.”</blockquote><figcaption><span class="av a1">MC</span><span><b>Mariana C.</b><small>Backend · Compra verificada ★★★★★</small></span></figcaption></figure>
+        <figure class="t reveal" style="--d:.12s"><blockquote>“El curso de Next.js + IA me consiguió mi primer freelance. El soporte por Discord responde más rápido que mi equipo anterior.”</blockquote><figcaption><span class="av a2">DR</span><span><b>Diego R.</b><small>Frontend · Compra verificada ★★★★★</small></span></figcaption></figure>
+        <figure class="t reveal" style="--d:.24s"><blockquote>“Pedí reembolso de un kit por talla y me devolvieron todo en 48h, sin pelear. Así se gana confianza.”</blockquote><figcaption><span class="av a3">AS</span><span><b>Ana S.</b><small>Full-stack · Compra verificada ★★★★★</small></span></figcaption></figure>
+      </div>
+      <div class="guarantee reveal">
+        <div><b>↩️ Garantía devStore 30 días</b><p>Si el producto no cumple lo prometido, te devolvemos el 100%. Sin formularios eternos.</p></div>
+        <a class="btn btn--primary magnetic" href="#catalogo">Comprar sin riesgo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--soft" id="faq">
+    <div class="wrap narrow">
+      <h2 class="h2 center reveal">Preguntas que nos hacen antes de pagar</h2>
+      <div class="faq reveal" style="--d:.1s">
+        <details open><summary>¿Las licencias son 100% originales?<span>+</span></summary><div><p>Sí. Somos distribuidor autorizado. Cada key se valida con el fabricante y llega con factura y comprobante de autenticidad.</p></div></details>
+        <details><summary>¿Qué tan rápido recibo mi compra?<span>+</span></summary><div><p>Productos digitales: menos de 2 minutos por email y en tu panel. Kits físicos: 24–72 h con rastreo y envío gratis desde $49.</p></div></details>
+        <details><summary>¿Qué métodos de pago aceptan?<span>+</span></summary><div><p>Visa, Mastercard, Amex, PayPal, Stripe, PSE, OXXO y transferencia. Todo bajo SSL + 3D Secure. Nunca almacenamos tu tarjeta.</p></div></details>
+        <details><summary>¿Cómo funciona la garantía de 30 días?<span>+</span></summary><div><p>Escríbenos al chat y devolvemos el 100% en 48 h. En licencias ya activadas ofrecemos cambio o crédito total.</p></div></details>
+        <details><summary>¿Dan factura para empresa?<span>+</span></summary><div><p>Sí, automática al pagar: RFC, RUT, CUIT, RUC y resto de LATAM + España. Ideal para deducir capacitación y software.</p></div></details>
+        <details><summary>¿El soporte es real?<span>+</span></summary><div><p>Sí, developers en español 24/7 por chat y Discord. Tiempo medio de primera respuesta: 4 minutos.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta reveal" data-parallax="8">
+        <h2>Empieza hoy con 20% OFF en tu primera compra</h2>
+        <p>Únete a +12,400 devs. Código <code>DEV20</code> aplicado al registrarte. Sin spam, solo drops y ofertas.</p>
+        <form class="cta__form" id="leadForm">
+          <input type="email" placeholder="tu@email.dev" required aria-label="Email" />
+          <button class="btn btn--primary magnetic" type="submit">Quiero mi descuento</button>
+        </form>
+        <small>🔒 Al registrarte aceptas términos. Nunca compartimos tus datos.</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <div><a class="brand" href="#top"><span class="brand__mark">&gt;_</span><span class="brand__name">devStore</span></a>
+      <p>Ecommerce para desarrolladores.<br />Cursos, licencias originales y kits pro.</p>
+      <p class="pay">Visa · Mastercard · PayPal · Stripe · PSE · OXXO</p></div>
+    <div><b>Tienda</b><a href="#catalogo">Cursos</a><a href="#catalogo">Licencias</a><a href="#catalogo">Kits</a><a href="#catalogo">Bundles</a></div>
+    <div><b>Confianza</b><a href="#seguridad">Seguridad</a><a href="#seguridad">Garantía 30 días</a><a href="#faq">Reembolsos</a><a href="#faq">Facturación</a></div>
+    <div><b>Ayuda</b><a href="#faq">FAQ</a><a href="#opiniones">Opiniones</a><a href="#">Contacto 24/7</a><a href="#">Términos</a></div>
+  </div>
+  <div class="wrap footer__base"><span>© <span id="year"></span> devStore · Hecho para devs 🤍</span><span>🔒 SSL · PCI DSS · 3D Secure</span></div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
+  <header><b>🛒 Tu carrito <span id="drawerCount">(0)</span></b><button id="cartClose" aria-label="Cerrar carrito">✕</button></header>
+  <div class="drawer__trust">🛡️ Compra protegida · 🔒 Checkout cifrado · ↩️ 30 días garantía</div>
+  <div class="drawer__items" id="cartItems"><p class="empty">Tu carrito está vacío.<br /><small>Añade un curso o licencia para ver la magia ✨</small></p></div>
+  <footer><div class="drawer__row"><span>Subtotal</span><b id="cartTotal">$0</b></div><button class="btn btn--primary btn--block" id="checkoutBtn">Pagar seguro →</button><small>Impuestos calculados al pagar · Factura automática</small></footer>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="top" id="toTop" aria-label="Volver arriba">↑</button>
+
+<script src="./app.js"></script>
+</body>
+</html>
